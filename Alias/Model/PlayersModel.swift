@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct PlayersModel {
-    var teamName: String
-    var playerName: String
+struct PlayersModel: Identifiable {
+    let id = UUID()
+    let teamName: String
+    let playerName: String
 }
