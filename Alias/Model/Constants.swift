@@ -10,6 +10,10 @@ import SwiftUI
 
 struct Constants {
     
+    struct Colors {
+       static let greenColor = Color("BGColor")
+    }
+    
     
     struct DisplaySize {
         static let screenWidth = UIScreen.main.bounds.size.width

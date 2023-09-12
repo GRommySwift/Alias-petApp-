@@ -19,8 +19,9 @@
 		0BD2C4222AAE22CC00521BAE /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2C4212AAE22CC00521BAE /* StartButton.swift */; };
 		0BD2C4242AAE233900521BAE /* StartTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2C4232AAE233900521BAE /* StartTitle.swift */; };
 		0BD2C4262AAE26C500521BAE /* TeamSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2C4252AAE26C500521BAE /* TeamSelectorView.swift */; };
-		0BD2C4282AAF952A00521BAE /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2C4272AAF952A00521BAE /* TeamView.swift */; };
+		0BD2C4282AAF952A00521BAE /* TeamContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2C4272AAF952A00521BAE /* TeamContentView.swift */; };
 		0BD2C42A2AAF955E00521BAE /* AddTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2C4292AAF955E00521BAE /* AddTeamView.swift */; };
+		0BD2C42C2AB0B98B00521BAE /* CardListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2C42B2AB0B98B00521BAE /* CardListRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,8 +38,9 @@
 		0BD2C4212AAE22CC00521BAE /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
 		0BD2C4232AAE233900521BAE /* StartTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTitle.swift; sourceTree = "<group>"; };
 		0BD2C4252AAE26C500521BAE /* TeamSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSelectorView.swift; sourceTree = "<group>"; };
-		0BD2C4272AAF952A00521BAE /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
+		0BD2C4272AAF952A00521BAE /* TeamContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamContentView.swift; sourceTree = "<group>"; };
 		0BD2C4292AAF955E00521BAE /* AddTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTeamView.swift; sourceTree = "<group>"; };
+		0BD2C42B2AB0B98B00521BAE /* CardListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,8 +135,7 @@
 		0BD2C4172AAE069700521BAE /* TeamSelectorScreen */ = {
 			isa = PBXGroup;
 			children = (
-				0BD2C4252AAE26C500521BAE /* TeamSelectorView.swift */,
-				0BD2C4272AAF952A00521BAE /* TeamView.swift */,
+				0BD2C42D2AB0B99400521BAE /* TeamsScreen */,
 				0BD2C4292AAF955E00521BAE /* AddTeamView.swift */,
 			);
 			path = TeamSelectorScreen;
@@ -159,6 +160,16 @@
 			children = (
 			);
 			path = AfterGameScreen;
+			sourceTree = "<group>";
+		};
+		0BD2C42D2AB0B99400521BAE /* TeamsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				0BD2C4252AAE26C500521BAE /* TeamSelectorView.swift */,
+				0BD2C4272AAF952A00521BAE /* TeamContentView.swift */,
+				0BD2C42B2AB0B98B00521BAE /* CardListRow.swift */,
+			);
+			path = TeamsScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,11 +242,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BD2C4282AAF952A00521BAE /* TeamView.swift in Sources */,
+				0BD2C4282AAF952A00521BAE /* TeamContentView.swift in Sources */,
 				0BD2C4132AAE062A00521BAE /* PlayersModel.swift in Sources */,
 				0BD2C4242AAE233900521BAE /* StartTitle.swift in Sources */,
 				0BD2C41C2AAE073800521BAE /* StartGame.swift in Sources */,
 				0BD2C4202AAE204100521BAE /* CustomFonts.swift in Sources */,
+				0BD2C42C2AB0B98B00521BAE /* CardListRow.swift in Sources */,
 				0BD2C4152AAE066B00521BAE /* GameModel.swift in Sources */,
 				0BD2C4042AAE051D00521BAE /* ContentView.swift in Sources */,
 				0BD2C42A2AAF955E00521BAE /* AddTeamView.swift in Sources */,

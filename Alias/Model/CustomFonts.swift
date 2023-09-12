@@ -9,6 +9,8 @@ import SwiftUI
 
 enum CustomFonts: String {
     case buttonFont = "AvenirNext-DemiBold"
+    case subTitleFont = "AvenirNextCondensed-LightItalic"
+    case heavyFont = "AvenirNextCondensed-Heavy"
 }
 
 extension Font {
