@@ -9,14 +9,19 @@ import SwiftUI
 
 struct StartButton: View {
     var body: some View {
-        Button("Начало игры") {
-            //
-        }.frame(width: Constants.DisplaySize.screenWidth / 1.2, height: Constants.DisplaySize.screenHeight / 13)
-            .font(.custom(.buttonFont, size: 40))
-            .foregroundColor(.gray)
-            .background(Color("ButtonColor"))
-            .cornerRadius(50)
-            .padding()
+        NavigationStack {
+            NavigationLink {
+                TeamSelectorView(items: AddNewTeam.teams).navigationBarBackButtonHidden(true)
+            } label: {
+                Text("Game")
+                .frame(width: Constants.DisplaySize.screenWidth / 1.2, height: Constants.DisplaySize.screenHeight / 13)
+                .font(.custom(.buttonFont, size: 40))
+                .foregroundColor(.gray)
+                .background(Color("ButtonColor"))
+                .cornerRadius(50)
+                .padding()
+            }
+        }
     }
 }
 

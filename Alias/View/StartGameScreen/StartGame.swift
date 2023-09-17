@@ -9,14 +9,18 @@ import SwiftUI
 
 struct StartGame: View {
     var body: some View {
-        ZStack {
-            Color("BGColor").ignoresSafeArea()
-            VStack {
-                Spacer()
-                StartTitle()
-                Spacer()
-                StartButton()
-                Spacer()
+       NavigationStack {
+            ZStack {
+                Color("BGColor").ignoresSafeArea()
+                VStack {
+                    Spacer()
+                    StartTitle()
+                    Spacer()
+                    NavigationLink(destination: TeamSelectorView(items: AddNewTeam.teams)) {
+                        StartButton() }
+                    
+                    Spacer()
+                }
             }
         }
     }

@@ -22,6 +22,9 @@
 		0BD2C4282AAF952A00521BAE /* TeamContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2C4272AAF952A00521BAE /* TeamContentView.swift */; };
 		0BD2C42A2AAF955E00521BAE /* AddTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2C4292AAF955E00521BAE /* AddTeamView.swift */; };
 		0BD2C42C2AB0B98B00521BAE /* CardListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2C42B2AB0B98B00521BAE /* CardListRow.swift */; };
+		0BD2C42F2AB71C1600521BAE /* AddNewTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2C42E2AB71C1600521BAE /* AddNewTeam.swift */; };
+		0BD2C4322AB72A9500521BAE /* NavigationTransitions in Frameworks */ = {isa = PBXBuildFile; productRef = 0BD2C4312AB72A9500521BAE /* NavigationTransitions */; };
+		0BD2C4372AB7318A00521BAE /* FlipAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2C4362AB7318A00521BAE /* FlipAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,8 @@
 		0BD2C4272AAF952A00521BAE /* TeamContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamContentView.swift; sourceTree = "<group>"; };
 		0BD2C4292AAF955E00521BAE /* AddTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTeamView.swift; sourceTree = "<group>"; };
 		0BD2C42B2AB0B98B00521BAE /* CardListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListRow.swift; sourceTree = "<group>"; };
+		0BD2C42E2AB71C1600521BAE /* AddNewTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewTeam.swift; sourceTree = "<group>"; };
+		0BD2C4362AB7318A00521BAE /* FlipAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BD2C4322AB72A9500521BAE /* NavigationTransitions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +104,7 @@
 				0BD2C4142AAE066B00521BAE /* GameModel.swift */,
 				0BD2C41D2AAE0DE400521BAE /* Constants.swift */,
 				0BD2C41F2AAE204100521BAE /* CustomFonts.swift */,
+				0BD2C4362AB7318A00521BAE /* FlipAnimation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -118,6 +125,7 @@
 		0BD2C4112AAE060D00521BAE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0BD2C42E2AB71C1600521BAE /* AddNewTeam.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -188,6 +196,9 @@
 			dependencies = (
 			);
 			name = Alias;
+			packageProductDependencies = (
+				0BD2C4312AB72A9500521BAE /* NavigationTransitions */,
+			);
 			productName = Alias;
 			productReference = 0BD2C3FE2AAE051D00521BAE /* Alias.app */;
 			productType = "com.apple.product-type.application";
@@ -216,6 +227,9 @@
 				Base,
 			);
 			mainGroup = 0BD2C3F52AAE051C00521BAE;
+			packageReferences = (
+				0BD2C4302AB72A9500521BAE /* XCRemoteSwiftPackageReference "swiftui-navigation-transitions" */,
+			);
 			productRefGroup = 0BD2C3FF2AAE051D00521BAE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -247,12 +261,14 @@
 				0BD2C4242AAE233900521BAE /* StartTitle.swift in Sources */,
 				0BD2C41C2AAE073800521BAE /* StartGame.swift in Sources */,
 				0BD2C4202AAE204100521BAE /* CustomFonts.swift in Sources */,
+				0BD2C42F2AB71C1600521BAE /* AddNewTeam.swift in Sources */,
 				0BD2C42C2AB0B98B00521BAE /* CardListRow.swift in Sources */,
 				0BD2C4152AAE066B00521BAE /* GameModel.swift in Sources */,
 				0BD2C4042AAE051D00521BAE /* ContentView.swift in Sources */,
 				0BD2C42A2AAF955E00521BAE /* AddTeamView.swift in Sources */,
 				0BD2C4022AAE051D00521BAE /* AliasApp.swift in Sources */,
 				0BD2C4222AAE22CC00521BAE /* StartButton.swift in Sources */,
+				0BD2C4372AB7318A00521BAE /* FlipAnimation.swift in Sources */,
 				0BD2C4262AAE26C500521BAE /* TeamSelectorView.swift in Sources */,
 				0BD2C41E2AAE0DE500521BAE /* Constants.swift in Sources */,
 			);
@@ -455,6 +471,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0BD2C4302AB72A9500521BAE /* XCRemoteSwiftPackageReference "swiftui-navigation-transitions" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/davdroman/swiftui-navigation-transitions";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.13.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0BD2C4312AB72A9500521BAE /* NavigationTransitions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0BD2C4302AB72A9500521BAE /* XCRemoteSwiftPackageReference "swiftui-navigation-transitions" */;
+			productName = NavigationTransitions;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0BD2C3F62AAE051C00521BAE /* Project object */;
 }
