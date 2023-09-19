@@ -16,13 +16,18 @@ struct TeamSelectorView: View {
         NavigationStack {
             ZStack {
                 Color("BGColor").ignoresSafeArea()
-                List(items.indices, id: \.self) { itemIndex in
-                    CardListRow(item: self.$items[itemIndex])
-                        .listRowBackground(Color("BGColor"))
+               
+                if items.count == 0 {
+                    NoTeamView()
+                } else {
+                    List(items.indices, id: \.self) { itemIndex in
+                        CardListRow(item: self.$items[itemIndex])
+                            .listRowBackground(Color("BGColor"))
+                    }.padding(EdgeInsets(top: 0, leading: -20, bottom: 0, trailing: -20))
+                        .scrollContentBackground(.hidden)
                 }
                 //.navigationTitle("Команды")
-                .padding(EdgeInsets(top: 0, leading: -20, bottom: 0, trailing: -20))
-                .scrollContentBackground(.hidden)
+                
                 
                 NavigationLink {
                     AddTeamView().navigationBarBackButtonHidden(true)
@@ -35,6 +40,7 @@ struct TeamSelectorView: View {
                         .clipShape(Circle())
                         .shadow(radius: 4, x: 0, y: 4)
                         .position(x: Constants.DisplaySize.screenWidth * 0.48, y: Constants.DisplaySize.screenHeight * 0.83  )
+                        
                 }
                 .padding()
             }

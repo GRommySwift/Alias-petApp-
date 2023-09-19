@@ -25,6 +25,9 @@
 		0BD2C42F2AB71C1600521BAE /* AddNewTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2C42E2AB71C1600521BAE /* AddNewTeam.swift */; };
 		0BD2C4322AB72A9500521BAE /* NavigationTransitions in Frameworks */ = {isa = PBXBuildFile; productRef = 0BD2C4312AB72A9500521BAE /* NavigationTransitions */; };
 		0BD2C4372AB7318A00521BAE /* FlipAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2C4362AB7318A00521BAE /* FlipAnimation.swift */; };
+		0BD2C4392AB9AB8A00521BAE /* NoTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2C4382AB9AB8A00521BAE /* NoTeamView.swift */; };
+		0BD2C43B2AB9AD9800521BAE /* NoTeamTextAndImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2C43A2AB9AD9800521BAE /* NoTeamTextAndImage.swift */; };
+		0BD2C43D2AB9B90F00521BAE /* NoTeamAnimatedArrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2C43C2AB9B90F00521BAE /* NoTeamAnimatedArrow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		0BD2C42B2AB0B98B00521BAE /* CardListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListRow.swift; sourceTree = "<group>"; };
 		0BD2C42E2AB71C1600521BAE /* AddNewTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewTeam.swift; sourceTree = "<group>"; };
 		0BD2C4362AB7318A00521BAE /* FlipAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipAnimation.swift; sourceTree = "<group>"; };
+		0BD2C4382AB9AB8A00521BAE /* NoTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoTeamView.swift; sourceTree = "<group>"; };
+		0BD2C43A2AB9AD9800521BAE /* NoTeamTextAndImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoTeamTextAndImage.swift; sourceTree = "<group>"; };
+		0BD2C43C2AB9B90F00521BAE /* NoTeamAnimatedArrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoTeamAnimatedArrow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,8 +180,11 @@
 			isa = PBXGroup;
 			children = (
 				0BD2C4252AAE26C500521BAE /* TeamSelectorView.swift */,
+				0BD2C4382AB9AB8A00521BAE /* NoTeamView.swift */,
+				0BD2C43A2AB9AD9800521BAE /* NoTeamTextAndImage.swift */,
 				0BD2C4272AAF952A00521BAE /* TeamContentView.swift */,
 				0BD2C42B2AB0B98B00521BAE /* CardListRow.swift */,
+				0BD2C43C2AB9B90F00521BAE /* NoTeamAnimatedArrow.swift */,
 			);
 			path = TeamsScreen;
 			sourceTree = "<group>";
@@ -266,8 +275,11 @@
 				0BD2C4152AAE066B00521BAE /* GameModel.swift in Sources */,
 				0BD2C4042AAE051D00521BAE /* ContentView.swift in Sources */,
 				0BD2C42A2AAF955E00521BAE /* AddTeamView.swift in Sources */,
+				0BD2C43B2AB9AD9800521BAE /* NoTeamTextAndImage.swift in Sources */,
+				0BD2C4392AB9AB8A00521BAE /* NoTeamView.swift in Sources */,
 				0BD2C4022AAE051D00521BAE /* AliasApp.swift in Sources */,
 				0BD2C4222AAE22CC00521BAE /* StartButton.swift in Sources */,
+				0BD2C43D2AB9B90F00521BAE /* NoTeamAnimatedArrow.swift in Sources */,
 				0BD2C4372AB7318A00521BAE /* FlipAnimation.swift in Sources */,
 				0BD2C4262AAE26C500521BAE /* TeamSelectorView.swift in Sources */,
 				0BD2C41E2AAE0DE500521BAE /* Constants.swift in Sources */,
