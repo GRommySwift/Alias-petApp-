@@ -8,19 +8,26 @@
 import SwiftUI
 
 struct NoTeamAnimatedArrow: View {
-    @State private var scale = 0.1
+    @State private var scale = 0.2
     var body: some View {
-        HStack {
+        VStack {
+            Spacer()
             Image(systemName: "arrow.down")
+            
                 .resizable()
+                .scaledToFit()
                 .scaleEffect(scale)
                 .onAppear {
+                    
                     let baseAnimation = Animation.easeInOut(duration: 1)
                     let repeated = baseAnimation.repeatForever(autoreverses: true)
-                    withAnimation(repeated) {
-                        scale = 0.04
+                    DispatchQueue.main.async {
+                        withAnimation(repeated) {
+                            scale = 0.1
+                        }
                     }
                 }
+            Spacer()
         }
     }
 }

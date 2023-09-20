@@ -13,9 +13,10 @@ struct NoTeamTextAndImage: View {
     var body: some View {
         HStack {
             VStack {
+                Spacer(minLength: 300)
                 Text("No team is here")
                     .font(.custom(.buttonFont, size: 40))
-                    .padding()
+                   // .padding()
                 VStack {
                     NoTeamAnimatedArrow()
                 }
