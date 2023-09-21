@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct StartGame: View {
-    @EnvironmentObject var items: AddNewTeam
     var body: some View {
        NavigationStack {
             ZStack {
@@ -17,7 +16,7 @@ struct StartGame: View {
                     Spacer()
                     StartTitle()
                     Spacer()
-                    NavigationLink(destination: TeamSelectorView(items: items)) {
+                    NavigationLink(destination: TeamSelectorView()) {
                         StartButton() }
                     
                     Spacer()

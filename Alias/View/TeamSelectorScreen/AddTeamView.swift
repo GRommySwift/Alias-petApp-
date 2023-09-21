@@ -13,7 +13,7 @@ struct AddTeamView: View {
     @State private var playerName1: String = ""
     @State private var playerName2: String = ""
     @State private var showAlert = false
-    @EnvironmentObject var items: AddNewTeam
+    @ObservedObject var newTeamItem = AddNewTeam()
     var body: some View {
         NavigationStack {
             ZStack {
@@ -30,7 +30,7 @@ struct AddTeamView: View {
 
                      
                         NavigationLink {
-                            TeamSelectorView(items: items).navigationBarBackButtonHidden(true)
+                            TeamSelectorView().navigationBarBackButtonHidden(true)
                         } label: {
                             Text("Save")
                                 .font(.title.weight(.semibold))
@@ -40,7 +40,10 @@ struct AddTeamView: View {
                                 .clipShape(RoundedRectangle(cornerRadius: 50))
                                 .shadow(radius: 4, x: 0, y: 4)
                         }.simultaneousGesture(TapGesture().onEnded{
-                            AddNewTeam().addNewTeam(teamName: teamName, playerName1: playerName1, playerName2: playerName2)
+                            
+                            newTeamItem.addNewTeam(teamName: teamName, playerName1: playerName1, playerName2: playerName2)
+                            newTeamItem.objectWillChange.send()
+                            print(AddNewTeam().teams)
                         })
                     
                         

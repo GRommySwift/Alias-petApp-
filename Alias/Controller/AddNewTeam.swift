@@ -16,7 +16,8 @@ class AddNewTeam: ObservableObject {
     
      func addNewTeam(teamName: String, playerName1: String, playerName2: String) {
         //if team1.isEmpty {
-        teams.append(PlayersModel(teamName: teamName, playerName1: playerName1, playerName2: playerName2, teamImage: "teamImage1", teamSummary: Constants.Summary.summaryArray.randomElement()!))
+             self.teams.append(PlayersModel(teamName: teamName, playerName1: playerName1, playerName2: playerName2, teamImage: "teamImage1", teamSummary: Constants.Summary.summaryArray.randomElement()!))
+
         
      //       print(team1)
      //   } else {
