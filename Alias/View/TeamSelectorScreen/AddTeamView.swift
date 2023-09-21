@@ -13,7 +13,7 @@ struct AddTeamView: View {
     @State private var playerName1: String = ""
     @State private var playerName2: String = ""
     @State private var showAlert = false
-    
+    @EnvironmentObject var items: AddNewTeam
     var body: some View {
         NavigationStack {
             ZStack {
@@ -30,7 +30,7 @@ struct AddTeamView: View {
 
                      
                         NavigationLink {
-                            TeamSelectorView(items: AddNewTeam.teams).navigationBarBackButtonHidden(true)
+                            TeamSelectorView(items: items).navigationBarBackButtonHidden(true)
                         } label: {
                             Text("Save")
                                 .font(.title.weight(.semibold))

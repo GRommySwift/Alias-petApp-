@@ -9,9 +9,10 @@ import SwiftUI
 
 struct StartButton: View {
     var body: some View {
+        @EnvironmentObject var items: AddNewTeam
         NavigationStack {
             NavigationLink {
-                TeamSelectorView(items: AddNewTeam.teams).navigationBarBackButtonHidden(true)
+                TeamSelectorView(items: items).navigationBarBackButtonHidden(true)
             } label: {
                 Text("Game")
                 .frame(width: Constants.DisplaySize.screenWidth / 1.2, height: Constants.DisplaySize.screenHeight / 13)

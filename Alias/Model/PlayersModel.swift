@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct PlayersModel: Identifiable {
-    let id = UUID()
+struct PlayersModel: Identifiable, Hashable {
+    let id = UUID().uuidString
     let teamName: String
     let playerName1: String
     let playerName2: String
