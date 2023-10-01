@@ -7,8 +7,14 @@
 
 import Foundation
 
-struct GameModel {
-    
-    //
-    
+
+struct GameModel: Identifiable {
+    let id = UUID()
+    let nameOfCategory: String
+    var isAdded: Bool
+    let arrayOfWords: Array<String>
 }
+
+
+
+

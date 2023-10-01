@@ -9,10 +9,15 @@ import SwiftUI
 
 struct StartGameButton: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationLink(destination: GameScreen()) {
+            Text("Start")
+                .font(.title.weight(.semibold))
+                .padding()
+                .background(Color.purple)
+                .foregroundColor(.white)
+                .clipShape(.rect(cornerRadius: 40))
+                .shadow(radius: 4, x: 0, y: 4)
+            
+        }
     }
-}
-
-#Preview {
-    StartGameButton()
 }

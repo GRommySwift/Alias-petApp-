@@ -15,8 +15,9 @@ struct CardListRow: View {
             Color.white.cornerRadius(12)
             TeamContentView(item: item)
         }
-        .fixedSize(horizontal: false, vertical: true)
+       // .fixedSize(horizontal: false, vertical: true)
         .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
+        .listRowBackground(Color("BGColor"))
     }
 }
 

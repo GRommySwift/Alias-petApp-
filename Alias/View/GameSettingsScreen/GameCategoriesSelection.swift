@@ -8,11 +8,46 @@
 import SwiftUI
 
 struct GameCategoriesSelection: View {
+    @EnvironmentObject var gameModel: CategoriesOfWordsVM
+    @Environment(\.dismiss) var dismiss
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            ZStack {
+                Color("BGColor").ignoresSafeArea(.all)
+                VStack {
+                    List {
+                        ForEach($gameModel.elements) { $element in
+                            CardOfWords(items: $element)
+                        }
+                    }
+                    .scrollContentBackground(.hidden)
+                }
+                
+                StartGameButton()
+                    .position(x: Constants.DisplaySize.screenWidth * 0.5, y: Constants.DisplaySize.screenHeight * 0.83  )
+            }
+            .navigationBarBackButtonHidden(true)
+            .toolbarBackground(.hidden, for: .navigationBar)
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button(action: {
+                        dismiss()
+                    }, label: {
+                        Image(systemName: "chevron.left")
+                            .foregroundStyle(.purple)
+                    })
+                }
+            }
+        }
     }
 }
 
-#Preview {
-    GameCategoriesSelection()
-}
+struct GameCategoriesSelection_Previews: PreviewProvider {
+        static var previews: some View {
+            NavigationStack {
+                GameCategoriesSelection()
+            }
+            .environmentObject(CategoriesOfWordsVM())
+            .environmentObject(AddNewTeam())
+        }
+    }

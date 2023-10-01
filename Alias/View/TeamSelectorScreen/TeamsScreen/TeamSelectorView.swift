@@ -9,47 +9,46 @@ import SwiftUI
 
 struct TeamSelectorView: View {
     
-    @StateObject private var items = AddNewTeam()
-    
+    @EnvironmentObject var addNewTeam: AddNewTeam
     var body: some View {
+        
         NavigationStack {
             ZStack {
                 Color("BGColor").ignoresSafeArea()
-                if items.teams.count == 0 {
+                if addNewTeam.teams.isEmpty {
                     NoTeamTextAndImage()
-                    
                 } else {
-                    List(items.teams.indices, id: \.self) { itemIndex in
-                        CardListRow(item: self.$items.teams[itemIndex])
-                        //                List {
-                        //                    ForEach(items.teams.indices, id: \.self) { itemIndex in
-                        //                        CardListRow(item: $items.teams[itemIndex])
-                        //                    }
-                        // }
-                            .listRowBackground(Color("BGColor"))
+                    List {
+                        
+                        ForEach(addNewTeam.teams.indices, id: \.self) { item in
+                            CardListRow(item: $addNewTeam.teams[item])
+                        }
+                        .onDelete(perform: deleteItem)
+                        
+                        
                     }.padding(EdgeInsets(top: 0, leading: -20, bottom: 0, trailing: -20))
                         .scrollContentBackground(.hidden)
-                      }
-                    //.navigationTitle("Команды")
-                    NavigationLink(destination: AddTeamView()) {
-                        Image(systemName: "plus")
-                            .font(.title.weight(.semibold))
-                            .padding()
-                            .background(Color.purple)
-                            .foregroundColor(.white)
-                            .clipShape(Circle())
-                            .shadow(radius: 4, x: 0, y: 4)
-                        
-                    }
-                    .position(x: Constants.DisplaySize.screenWidth * 0.5, y: Constants.DisplaySize.screenHeight * 0.83  )
+                    NextScreenButton()
+                        .position(x: Constants.DisplaySize.screenWidth * 0.85, y: Constants.DisplaySize.screenHeight * 0.83)
                 }
+               AddNewTeamButton()
+                .position(x: Constants.DisplaySize.screenWidth * 0.5, y: Constants.DisplaySize.screenHeight * 0.83  )
+                
             }
         }
     }
-
+    func deleteItem(indexSet: IndexSet) {
+            addNewTeam.teams.remove(atOffsets: indexSet)
+    }
+    
+}
 struct TeamSelectorView_Previews: PreviewProvider {
     
     static var previews: some View {
-        TeamSelectorView()
+        NavigationStack {
+            TeamSelectorView()
+        }
+        .environmentObject(AddNewTeam())
+        .environmentObject(CategoriesOfWordsVM())
     }
 }

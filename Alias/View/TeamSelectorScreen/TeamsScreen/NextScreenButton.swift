@@ -9,10 +9,15 @@ import SwiftUI
 
 struct NextScreenButton: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationLink(destination: GameCategoriesSelection()) {
+            Image(systemName: "chevron.right")
+                .font(.title.weight(.semibold))
+                .padding()
+                .background(Color.purple)
+                .foregroundColor(.white)
+                .clipShape(Circle())
+                .shadow(radius: 4, x: 0, y: 4)
+            
+        }
     }
-}
-
-#Preview {
-    NextScreenButton()
 }

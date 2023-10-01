@@ -8,11 +8,30 @@
 import SwiftUI
 
 struct ItemSelector: View {
+    @Binding var item: GameModel
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Spacer()
+            ZStack(alignment: .leading) {
+                HStack {
+                    Text(item.nameOfCategory)
+                }
+            }
+            Spacer()
+            ZStack {
+                Color( item.isAdded ? .green: .purple)
+                    .clipShape(.rect(cornerRadius: 12))
+                    .onTapGesture {
+                        item.isAdded.toggle()
+                    }
+                Image(systemName: item.isAdded ? "checkmark": "plus")
+                    .font(.title)
+                    .foregroundStyle(.white)
+//                    .onTapGesture {
+//                        item.isAdded.toggle()
+//                    }
+            }.frame(width: 70)
+                
+        }
     }
-}
-
-#Preview {
-    ItemSelector()
 }

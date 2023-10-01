@@ -9,19 +9,11 @@ import SwiftUI
 
 class AddNewTeam: ObservableObject {
     
-    @Published var teams = [PlayersModel]()
-    
-  //  var team1: [PlayersModel] = []
-  //  var team2: [PlayersModel] = []
-    
-     func addNewTeam(teamName: String, playerName1: String, playerName2: String) {
-        //if team1.isEmpty {
-             self.teams.append(PlayersModel(teamName: teamName, playerName1: playerName1, playerName2: playerName2, teamImage: "teamImage1", teamSummary: Constants.Summary.summaryArray.randomElement()!))
+    @Published var teams: [PlayersModel] = []
 
-        
-     //       print(team1)
-     //   } else {
-          //  team2.append(PlayersModel(teamName: teamName, playerName1: playerName1, playerName2: playerName2, teamImage: "temaImage1", teamSummary: Constants.Summary.summaryArray.randomElement()!))
-      //  }
+     func addNewTeam(teamName: String, playerName1: String, playerName2: String) {
+         let newItem = PlayersModel(teamName: teamName, playerName1: playerName1, playerName2: playerName2, teamImage: "teamImage1", teamSummary: Constants.Summary.summaryArray.randomElement()!)
+             teams.append(newItem)
+
     }
 }

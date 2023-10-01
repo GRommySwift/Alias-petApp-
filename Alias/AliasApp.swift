@@ -26,9 +26,16 @@ struct AliasApp: App {
 //        }
 //    }
 //
+    @StateObject var addNewTeam: AddNewTeam = AddNewTeam()
+    @StateObject var gameModel: CategoriesOfWordsVM = CategoriesOfWordsVM()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                ContentView()
+            }
+            .environmentObject(addNewTeam)
+            .environmentObject(gameModel)
         }
     }
 }

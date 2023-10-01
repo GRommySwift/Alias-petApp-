@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct CardOfWords: View {
+    @Binding var items: GameModel
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        ZStack {
+            Color.white.cornerRadius(12)
+
+            ItemSelector(item: $items)
+            
+        }
+        .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
+        .frame(width: Constants.DisplaySize.screenWidth * 0.9, height: Constants.DisplaySize.screenHeight * 0.07)
+        .listRowBackground(Color("BGColor"))
+        
     }
 }
 
-#Preview {
-    CardOfWords()
-}

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TeamContentView: View {
     
-    var item: PlayersModel
+    @State var item: PlayersModel
     
     var body: some View {
         
@@ -18,15 +18,25 @@ struct TeamContentView: View {
                     .font(.custom(.buttonFont, size: 30))
                     .fixedSize(horizontal: false, vertical: true)
                     .foregroundColor(Constants.Colors.greenColor)
+                    
                 HStack {
-                    Text(item.teamSummary)
-                        .font(.custom(.subTitleFont, size: 14))
-                        .foregroundColor(Constants.Colors.greenColor)
+                    VStack(alignment: .center, spacing: 5) {
+                        Text("Player1 - \(item.playerName1)")
+                            .font(.custom(.subTitleFont, size: 16))
+                            .foregroundColor(Constants.Colors.greenColor)
+                        Text("Player1 - \(item.playerName2)")
+                            .font(.custom(.subTitleFont, size: 16))
+                            .foregroundColor(Constants.Colors.greenColor)
+                        Text(item.teamSummary)
+                            .font(.custom(.subTitleFont, size: 14))
+                            .foregroundColor(Constants.Colors.greenColor)
+                    }
                     Image(item.teamImage)
                         .resizable()
                         .frame(width: 100, height: 100)
             }
         }
+        .frame(alignment: .center)
         .padding()
     }
 }

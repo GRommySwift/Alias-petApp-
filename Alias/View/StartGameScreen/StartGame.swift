@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct StartGame: View {
+    
     var body: some View {
        NavigationStack {
             ZStack {
@@ -27,7 +28,13 @@ struct StartGame: View {
 }
 
 struct StartGame_Previews: PreviewProvider {
+    
     static var previews: some View {
-        StartGame()
+        NavigationStack {
+            StartGame()
+            
+        }
+        .environmentObject(AddNewTeam())
+        .environmentObject(CategoriesOfWordsVM())
     }
 }
