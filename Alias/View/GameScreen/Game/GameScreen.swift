@@ -20,8 +20,20 @@ struct GameScreen: View {
                 VStack(spacing: -50) {
                     Text("Good answers : 6").font(.custom(.buttonFont, size: 20)).opacity(0.8).foregroundStyle(.white)
                     Text("\(timeRemaining)").font(.custom(.buttonFont, size: 250)).opacity(0.1).foregroundStyle(.white)
+                    
+                        .padding()
+                 CardView(item: gameModel.arrayOfWords)
+                        .padding()
+                        .font(.custom(.buttonFont, size: 30))
+                        .frame(width: Constants.DisplaySize.screenWidth * 0.9, height: Constants.DisplaySize.screenHeight * 0.35)
                     Spacer()
+                    
+                HStack {
+                       
+
+                    }
                 }
+              
                     .onReceive(timer, perform: { _ in
                         if timeRemaining > 0 {
                             timeRemaining -= 1
@@ -30,6 +42,7 @@ struct GameScreen: View {
                         }
                         
                     })
+                
             }
         }
     }
@@ -37,4 +50,5 @@ struct GameScreen: View {
 
 #Preview {
     GameScreen()
+        .environmentObject(CategoriesOfWordsVM())
 }

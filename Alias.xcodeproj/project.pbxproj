@@ -12,6 +12,7 @@
 		0B0530E62AC858430020F7A0 /* ItemSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0530E52AC858430020F7A0 /* ItemSelector.swift */; };
 		0B0530E82AC859F00020F7A0 /* CardOfWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0530E72AC859F00020F7A0 /* CardOfWords.swift */; };
 		0B0530EA2AC86EBB0020F7A0 /* StartGameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0530E92AC86EBB0020F7A0 /* StartGameButton.swift */; };
+		0BB071F32ACAB2D7004DB2F3 /* CardContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB071F22ACAB2D7004DB2F3 /* CardContent.swift */; };
 		0BD2C4022AAE051D00521BAE /* AliasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2C4012AAE051D00521BAE /* AliasApp.swift */; };
 		0BD2C4042AAE051D00521BAE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2C4032AAE051D00521BAE /* ContentView.swift */; };
 		0BD2C4062AAE051F00521BAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BD2C4052AAE051F00521BAE /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		0B0530E52AC858430020F7A0 /* ItemSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSelector.swift; sourceTree = "<group>"; };
 		0B0530E72AC859F00020F7A0 /* CardOfWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardOfWords.swift; sourceTree = "<group>"; };
 		0B0530E92AC86EBB0020F7A0 /* StartGameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameButton.swift; sourceTree = "<group>"; };
+		0BB071F22ACAB2D7004DB2F3 /* CardContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContent.swift; sourceTree = "<group>"; };
 		0BD2C3FE2AAE051D00521BAE /* Alias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alias.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BD2C4012AAE051D00521BAE /* AliasApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasApp.swift; sourceTree = "<group>"; };
 		0BD2C4032AAE051D00521BAE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 			children = (
 				0BD39AC42AC99BBB00056C0F /* GameScreen.swift */,
 				0BD39ACB2AC9A98E00056C0F /* CardView.swift */,
+				0BB071F22ACAB2D7004DB2F3 /* CardContent.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				0B0530E62AC858430020F7A0 /* ItemSelector.swift in Sources */,
 				0BED8CF42AC82E1E00E7EA32 /* AddNewTeamButton.swift in Sources */,
 				0BD2C43D2AB9B90F00521BAE /* NoTeamAnimatedArrow.swift in Sources */,
+				0BB071F32ACAB2D7004DB2F3 /* CardContent.swift in Sources */,
 				0BD2C4262AAE26C500521BAE /* TeamSelectorView.swift in Sources */,
 				0BD2C41E2AAE0DE500521BAE /* Constants.swift in Sources */,
 			);
