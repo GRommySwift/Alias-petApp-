@@ -10,6 +10,7 @@ import SwiftUI
 struct GameCategoriesSelection: View {
     @EnvironmentObject var gameModel: CategoriesOfWordsVM
     @Environment(\.dismiss) var dismiss
+    @State var isPresenting = false
     var body: some View {
         NavigationStack {
             ZStack {
@@ -23,13 +24,27 @@ struct GameCategoriesSelection: View {
                     .scrollContentBackground(.hidden)
                 }
                 
-                StartGameButton()
-                    .position(x: Constants.DisplaySize.screenWidth * 0.5, y: Constants.DisplaySize.screenHeight * 0.83  )
+                Button {
+                    isPresenting = true
+                    gameModel.addWordsToArray()
+                } label: {
+                    Text("Start")
+                        .font(.title.weight(.semibold))
+                        .padding()
+                        .background(Color.purple)
+                        .foregroundColor(.white)
+                        .cornerRadius(40)
+                        .shadow(radius: 4, x: 0, y: 4)
+                }
+                .position(x: Constants.DisplaySize.screenWidth * 0.5, y: Constants.DisplaySize.screenHeight * 0.83  )
+                .navigationDestination(isPresented: $isPresenting) {
+                    GameScreen()
+                }
             }
             .navigationBarBackButtonHidden(true)
             .toolbarBackground(.hidden, for: .navigationBar)
             .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
+                ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {
                         dismiss()
                     }, label: {

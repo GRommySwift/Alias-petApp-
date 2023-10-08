@@ -9,22 +9,30 @@ import Foundation
 
 class CategoriesOfWordsVM: ObservableObject {
     
-   
+    @Published var randomElementOfArray = Int()
     @Published var elements: [GameModel] = [
         GameModel(nameOfCategory: "Element One", isAdded: false, arrayOfWords: arrayOne),
         GameModel(nameOfCategory: "Element Two", isAdded: false, arrayOfWords: arrayTwo),
         GameModel(nameOfCategory: "Element Three", isAdded: false, arrayOfWords: arrayThree)]
     
-    @Published var arrayOfWords = "Harry potter and orden of fenix"
+    @Published var arrayOfWords = [String]()
     
-//    func addWordsToArray() {
-//        for array in elements {
-//            for i in array.arrayOfWords {
-//                arrayOfWords.append(i)
-//            }
-//            
-//        }
-//    }
+    @Published var gameResult = [GameResultsModel]()
+    
+    func addWordsToArray() {
+        for array in elements {
+            if array.isAdded == true {
+                for i in array.arrayOfWords {
+                    arrayOfWords.append(i)
+                }
+            }
+        }
+    }
+    
+    func nextButtonPressed() {
+        randomElementOfArray += 1
+        print(randomElementOfArray)
+    }
 }
 
 

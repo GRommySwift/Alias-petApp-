@@ -11,8 +11,6 @@
 		0B0530E42AC849C30020F7A0 /* CategoriesOfWordsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0530E32AC849C30020F7A0 /* CategoriesOfWordsVM.swift */; };
 		0B0530E62AC858430020F7A0 /* ItemSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0530E52AC858430020F7A0 /* ItemSelector.swift */; };
 		0B0530E82AC859F00020F7A0 /* CardOfWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0530E72AC859F00020F7A0 /* CardOfWords.swift */; };
-		0B0530EA2AC86EBB0020F7A0 /* StartGameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0530E92AC86EBB0020F7A0 /* StartGameButton.swift */; };
-		0BB071F32ACAB2D7004DB2F3 /* CardContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB071F22ACAB2D7004DB2F3 /* CardContent.swift */; };
 		0BD2C4022AAE051D00521BAE /* AliasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2C4012AAE051D00521BAE /* AliasApp.swift */; };
 		0BD2C4042AAE051D00521BAE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2C4032AAE051D00521BAE /* ContentView.swift */; };
 		0BD2C4062AAE051F00521BAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BD2C4052AAE051F00521BAE /* Assets.xcassets */; };
@@ -36,6 +34,7 @@
 		0BED8CF42AC82E1E00E7EA32 /* AddNewTeamButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BED8CF32AC82E1E00E7EA32 /* AddNewTeamButton.swift */; };
 		0BED8CF62AC82E3100E7EA32 /* NextScreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BED8CF52AC82E3100E7EA32 /* NextScreenButton.swift */; };
 		0BED8CF82AC82F1100E7EA32 /* GameCategoriesSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BED8CF72AC82F1100E7EA32 /* GameCategoriesSelection.swift */; };
+		309A834A2AD34F8C00B71B44 /* GameResultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309A83492AD34F8C00B71B44 /* GameResultsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,8 +42,6 @@
 		0B0530E32AC849C30020F7A0 /* CategoriesOfWordsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesOfWordsVM.swift; sourceTree = "<group>"; };
 		0B0530E52AC858430020F7A0 /* ItemSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSelector.swift; sourceTree = "<group>"; };
 		0B0530E72AC859F00020F7A0 /* CardOfWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardOfWords.swift; sourceTree = "<group>"; };
-		0B0530E92AC86EBB0020F7A0 /* StartGameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameButton.swift; sourceTree = "<group>"; };
-		0BB071F22ACAB2D7004DB2F3 /* CardContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContent.swift; sourceTree = "<group>"; };
 		0BD2C3FE2AAE051D00521BAE /* Alias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alias.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BD2C4012AAE051D00521BAE /* AliasApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasApp.swift; sourceTree = "<group>"; };
 		0BD2C4032AAE051D00521BAE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +66,7 @@
 		0BED8CF32AC82E1E00E7EA32 /* AddNewTeamButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewTeamButton.swift; sourceTree = "<group>"; };
 		0BED8CF52AC82E3100E7EA32 /* NextScreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextScreenButton.swift; sourceTree = "<group>"; };
 		0BED8CF72AC82F1100E7EA32 /* GameCategoriesSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCategoriesSelection.swift; sourceTree = "<group>"; };
+		309A83492AD34F8C00B71B44 /* GameResultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +122,7 @@
 			children = (
 				0BD2C4122AAE062A00521BAE /* PlayersModel.swift */,
 				0BD2C4142AAE066B00521BAE /* GameModel.swift */,
+				309A83492AD34F8C00B71B44 /* GameResultsModel.swift */,
 				0B0530E12AC8497E0020F7A0 /* WordsForGame.swift */,
 				0BD2C41D2AAE0DE400521BAE /* Constants.swift */,
 				0BD2C41F2AAE204100521BAE /* CustomFonts.swift */,
@@ -178,7 +177,6 @@
 				0BED8CF72AC82F1100E7EA32 /* GameCategoriesSelection.swift */,
 				0B0530E52AC858430020F7A0 /* ItemSelector.swift */,
 				0B0530E72AC859F00020F7A0 /* CardOfWords.swift */,
-				0B0530E92AC86EBB0020F7A0 /* StartGameButton.swift */,
 			);
 			path = GameSettingsScreen;
 			sourceTree = "<group>";
@@ -218,7 +216,6 @@
 			children = (
 				0BD39AC42AC99BBB00056C0F /* GameScreen.swift */,
 				0BD39ACB2AC9A98E00056C0F /* CardView.swift */,
-				0BB071F22ACAB2D7004DB2F3 /* CardContent.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -317,7 +314,6 @@
 				0BD2C42C2AB0B98B00521BAE /* CardListRow.swift in Sources */,
 				0BD39AC52AC99BBB00056C0F /* GameScreen.swift in Sources */,
 				0BD2C4152AAE066B00521BAE /* GameModel.swift in Sources */,
-				0B0530EA2AC86EBB0020F7A0 /* StartGameButton.swift in Sources */,
 				0BD2C4042AAE051D00521BAE /* ContentView.swift in Sources */,
 				0BD2C42A2AAF955E00521BAE /* AddTeamView.swift in Sources */,
 				0BD2C43B2AB9AD9800521BAE /* NoTeamTextAndImage.swift in Sources */,
@@ -325,10 +321,10 @@
 				0BD2C4022AAE051D00521BAE /* AliasApp.swift in Sources */,
 				0BD2C4222AAE22CC00521BAE /* StartButton.swift in Sources */,
 				0BD39ACC2AC9A98E00056C0F /* CardView.swift in Sources */,
+				309A834A2AD34F8C00B71B44 /* GameResultsModel.swift in Sources */,
 				0B0530E62AC858430020F7A0 /* ItemSelector.swift in Sources */,
 				0BED8CF42AC82E1E00E7EA32 /* AddNewTeamButton.swift in Sources */,
 				0BD2C43D2AB9B90F00521BAE /* NoTeamAnimatedArrow.swift in Sources */,
-				0BB071F32ACAB2D7004DB2F3 /* CardContent.swift in Sources */,
 				0BD2C4262AAE26C500521BAE /* TeamSelectorView.swift in Sources */,
 				0BD2C41E2AAE0DE500521BAE /* Constants.swift in Sources */,
 			);

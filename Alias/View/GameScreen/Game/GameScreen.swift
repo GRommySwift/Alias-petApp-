@@ -13,6 +13,7 @@ struct GameScreen: View {
     @State var timeRemaining: Int = 10
     
     @State var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -20,18 +21,46 @@ struct GameScreen: View {
                 VStack(spacing: -50) {
                     Text("Good answers : 6").font(.custom(.buttonFont, size: 20)).opacity(0.8).foregroundStyle(.white)
                     Text("\(timeRemaining)").font(.custom(.buttonFont, size: 250)).opacity(0.1).foregroundStyle(.white)
-                    
                         .padding()
-                 CardView(item: gameModel.arrayOfWords)
-                        .padding()
-                        .font(.custom(.buttonFont, size: 30))
-                        .frame(width: Constants.DisplaySize.screenWidth * 0.9, height: Constants.DisplaySize.screenHeight * 0.35)
-                    Spacer()
+//                    if gameModel.arrayOfWords.isEmpty {
                     
+                        CardView(item: arrayOne[gameModel.randomElementOfArray])
+                            .padding()
+                            .font(.custom(.buttonFont, size: 30))
+                            .frame(width: Constants.DisplaySize.screenWidth * 0.9, height: Constants.DisplaySize.screenHeight * 0.35)
+                        Spacer()
+//                    } else {
+//                        CardView(item: gameModel.arrayOfWords[gameModel.randomElementOfArray])
+//                               .padding()
+//                               .font(.custom(.buttonFont, size: 30))
+//                               .frame(width: Constants.DisplaySize.screenWidth * 0.9, height: Constants.DisplaySize.screenHeight * 0.35)
+//                           Spacer()
+//                    }
                 HStack {
-                       
-
+                    Spacer()
+                    Button(action: skipBuuttonPressed, label: {
+                        Text("Skip")
+                            .font(.title.weight(.semibold))
+                            .padding()
+                            .background(Color.purple)
+                            .foregroundColor(.white)
+                            .clipShape(RoundedRectangle(cornerRadius: 50))
+                            .shadow(radius: 4, x: 0, y: 4)
+                            
+                    })
+                    Spacer()
+                    Button(action: gameModel.nextButtonPressed, label: {
+                        Text("Next")
+                            .font(.title.weight(.semibold))
+                            .padding()
+                            .background(Color.purple)
+                            .foregroundColor(.white)
+                            .clipShape(RoundedRectangle(cornerRadius: 50))
+                            .shadow(radius: 4, x: 0, y: 4)
+                    })
+                        Spacer()
                     }
+                    Spacer()
                 }
               
                     .onReceive(timer, perform: { _ in
@@ -44,11 +73,23 @@ struct GameScreen: View {
                     })
                 
             }
+            .navigationBarBackButtonHidden(true)
         }
     }
+    
+    func skipBuuttonPressed() {
+        print(gameModel.randomElementOfArray)
+    }
+    
+ 
 }
 
-#Preview {
-    GameScreen()
-        .environmentObject(CategoriesOfWordsVM())
-}
+
+struct GameScreen_Previews: PreviewProvider {
+        static var previews: some View {
+            NavigationStack {
+                GameScreen()
+            }
+            .environmentObject(CategoriesOfWordsVM())
+        }
+    }

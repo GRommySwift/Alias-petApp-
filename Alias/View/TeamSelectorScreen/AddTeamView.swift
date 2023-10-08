@@ -45,7 +45,7 @@ struct AddTeamView: View {
             }
             .navigationBarBackButtonHidden(true)
             .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
+                ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {
                         dismiss()
                     }, label: {

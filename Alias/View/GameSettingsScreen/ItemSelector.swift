@@ -20,7 +20,7 @@ struct ItemSelector: View {
             Spacer()
             ZStack {
                 Color( item.isAdded ? .green: .purple)
-                    .clipShape(.rect(cornerRadius: 12))
+                    .cornerRadius(12)
                     .onTapGesture {
                         item.isAdded.toggle()
                     }
