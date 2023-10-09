@@ -11,8 +11,9 @@ struct GameScreen: View {
     @EnvironmentObject var gameModel: CategoriesOfWordsVM
     
     @State var timeRemaining: Int = 10
-    
     @State var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @State var offset: CGSize = .zero
+    @State private var isShowingCard1 = true
     
     var body: some View {
         NavigationStack {
@@ -23,13 +24,26 @@ struct GameScreen: View {
                     Text("\(timeRemaining)").font(.custom(.buttonFont, size: 250)).opacity(0.1).foregroundStyle(.white)
                         .padding()
 //                    if gameModel.arrayOfWords.isEmpty {
-                    
-                        CardView(item: arrayOne[gameModel.randomElementOfArray])
+                    if isShowingCard1 {
+                    CardView(item: arrayOne[gameModel.randomElementOfArray])
                             .padding()
                             .font(.custom(.buttonFont, size: 30))
                             .frame(width: Constants.DisplaySize.screenWidth * 0.9, height: Constants.DisplaySize.screenHeight * 0.35)
+                            .offset(offset)
+                          //  .transition(.scale)
+                           // .animation(.default)
                         Spacer()
-//                    } else {
+                    } else {
+                        CardView(item: arrayOne[gameModel.randomElementOfArray])
+                                .padding()
+                                .font(.custom(.buttonFont, size: 30))
+                                .frame(width: Constants.DisplaySize.screenWidth * 0.9, height: Constants.DisplaySize.screenHeight * 0.35)
+                                .offset(offset)
+                              //  .transition(.scale)
+                               // .animation(.default)
+                        Spacer()
+                        
+                    }
 //                        CardView(item: gameModel.arrayOfWords[gameModel.randomElementOfArray])
 //                               .padding()
 //                               .font(.custom(.buttonFont, size: 30))
@@ -38,7 +52,13 @@ struct GameScreen: View {
 //                    }
                 HStack {
                     Spacer()
-                    Button(action: skipBuuttonPressed, label: {
+                    Button(action:{
+                        withAnimation {
+                            offset.width = -500
+                        }
+                        skipBuuttonPressed()
+                        isShowingCard1.toggle()
+                    }, label: {
                         Text("Skip")
                             .font(.title.weight(.semibold))
                             .padding()
@@ -49,7 +69,13 @@ struct GameScreen: View {
                             
                     })
                     Spacer()
-                    Button(action: gameModel.nextButtonPressed, label: {
+                    Button(action: {
+                        withAnimation {
+                            offset.width = 500
+                        }
+                        isShowingCard1.toggle()
+                        nextButtonPressed()
+                    }, label: {
                         Text("Next")
                             .font(.title.weight(.semibold))
                             .padding()
@@ -77,7 +103,15 @@ struct GameScreen: View {
         }
     }
     
+    func nextButtonPressed() {
+        gameModel.randomElementOfArray = (gameModel.randomElementOfArray + 1)
+        offset = .zero //
+        print(gameModel.randomElementOfArray)
+    }
+    
     func skipBuuttonPressed() {
+        gameModel.randomElementOfArray = (gameModel.randomElementOfArray + 1)
+        offset = .zero
         print(gameModel.randomElementOfArray)
     }
     

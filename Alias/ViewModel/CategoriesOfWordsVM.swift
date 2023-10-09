@@ -9,7 +9,7 @@ import Foundation
 
 class CategoriesOfWordsVM: ObservableObject {
     
-    @Published var randomElementOfArray = Int()
+    @Published  var randomElementOfArray = 0
     @Published var elements: [GameModel] = [
         GameModel(nameOfCategory: "Element One", isAdded: false, arrayOfWords: arrayOne),
         GameModel(nameOfCategory: "Element Two", isAdded: false, arrayOfWords: arrayTwo),
@@ -28,11 +28,8 @@ class CategoriesOfWordsVM: ObservableObject {
             }
         }
     }
+ 
     
-    func nextButtonPressed() {
-        randomElementOfArray += 1
-        print(randomElementOfArray)
-    }
 }
 
 
