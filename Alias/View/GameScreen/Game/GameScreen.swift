@@ -10,93 +10,61 @@ import SwiftUI
 struct GameScreen: View {
     @EnvironmentObject var gameModel: CategoriesOfWordsVM
     
-    @State var timeRemaining: Int = 10
+    @State var timeRemaining: Int = 1
     @State var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    @State var offset: CGSize = .zero
+    //  @State var offset: CGSize = .zero
     @State private var isShowingCard1 = true
+    @State private var goodAnswers: Int = 0
     
     var body: some View {
         NavigationStack {
             ZStack {
                 Color("BGColor").ignoresSafeArea(.all)
                 VStack(spacing: -50) {
-                    Text("Good answers : 6").font(.custom(.buttonFont, size: 20)).opacity(0.8).foregroundStyle(.white)
-                    Text("\(timeRemaining)").font(.custom(.buttonFont, size: 250)).opacity(0.1).foregroundStyle(.white)
-                        .padding()
-//                    if gameModel.arrayOfWords.isEmpty {
-                    if isShowingCard1 {
-                    CardView(item: arrayOne[gameModel.randomElementOfArray])
+                    Text("Правильно : \(goodAnswers)").font(.custom(.buttonFont, size: 20)).opacity(0.8).foregroundStyle(.white)
+                    
+                        Text("\(timeRemaining)").font(.custom(.buttonFont, size: 250)).opacity(0.1).foregroundStyle(.white)
                             .padding()
-                            .font(.custom(.buttonFont, size: 30))
-                            .frame(width: Constants.DisplaySize.screenWidth * 0.9, height: Constants.DisplaySize.screenHeight * 0.35)
-                            .offset(offset)
-                          //  .transition(.scale)
-                           // .animation(.default)
+                    if timeRemaining < 1 {
+                        Text("Последнее слово").font(.custom(.buttonFont, size: 40)).opacity(0.5).foregroundStyle(.red)
+                            Spacer()
+                    }
+                    if isShowingCard1 {
+                        CardReady(item: ArrayOfWords().arrayOne[gameModel.randomElementOfArray])
                         Spacer()
                     } else {
-                        CardView(item: arrayOne[gameModel.randomElementOfArray])
-                                .padding()
-                                .font(.custom(.buttonFont, size: 30))
-                                .frame(width: Constants.DisplaySize.screenWidth * 0.9, height: Constants.DisplaySize.screenHeight * 0.35)
-                                .offset(offset)
-                              //  .transition(.scale)
-                               // .animation(.default)
+                        CardReady(item: ArrayOfWords().arrayOne[gameModel.randomElementOfArray])
                         Spacer()
-                        
                     }
-//                        CardView(item: gameModel.arrayOfWords[gameModel.randomElementOfArray])
-//                               .padding()
-//                               .font(.custom(.buttonFont, size: 30))
-//                               .frame(width: Constants.DisplaySize.screenWidth * 0.9, height: Constants.DisplaySize.screenHeight * 0.35)
-//                           Spacer()
-//                    }
-                HStack {
-                    Spacer()
-                    Button(action:{
-                        withAnimation {
-                            offset.width = -500
-                        }
-                        skipBuuttonPressed()
-                        isShowingCard1.toggle()
-                    }, label: {
-                        Text("Skip")
-                            .font(.title.weight(.semibold))
-                            .padding()
-                            .background(Color.purple)
-                            .foregroundColor(.white)
-                            .clipShape(RoundedRectangle(cornerRadius: 50))
-                            .shadow(radius: 4, x: 0, y: 4)
+                    
+                    HStack {
+                        Spacer()
+                       
+                            CreatedButton(textLabel: "Пропустить") {
+                                isShowingCard1.toggle()
+                                skipBuuttonPressed()
+                            }
                             
-                    })
-                    Spacer()
-                    Button(action: {
-                        withAnimation {
-                            offset.width = 500
-                        }
-                        isShowingCard1.toggle()
-                        nextButtonPressed()
-                    }, label: {
-                        Text("Next")
-                            .font(.title.weight(.semibold))
-                            .padding()
-                            .background(Color.purple)
-                            .foregroundColor(.white)
-                            .clipShape(RoundedRectangle(cornerRadius: 50))
-                            .shadow(radius: 4, x: 0, y: 4)
-                    })
+                            Spacer()
+                            CreatedButton(textLabel: "Дальше") {
+                                nextButtonPressed()
+                                isShowingCard1.toggle()
+                                goodAnswers += 1
+                            }
+                        
                         Spacer()
                     }
                     Spacer()
+                    
                 }
-              
-                    .onReceive(timer, perform: { _ in
-                        if timeRemaining > 0 {
-                            timeRemaining -= 1
-                        } else {
-                            timeRemaining = 0
-                        }
-                        
-                    })
+                .onReceive(timer, perform: { _ in
+                    if timeRemaining > 0 {
+                        timeRemaining -= 1
+                    } else {
+                        timeRemaining = 0
+                    }
+                    
+                })
                 
             }
             .navigationBarBackButtonHidden(true)
@@ -105,25 +73,23 @@ struct GameScreen: View {
     
     func nextButtonPressed() {
         gameModel.randomElementOfArray = (gameModel.randomElementOfArray + 1)
-        offset = .zero //
-        print(gameModel.randomElementOfArray)
+        // print(gameModel.randomElementOfArray)
     }
     
     func skipBuuttonPressed() {
         gameModel.randomElementOfArray = (gameModel.randomElementOfArray + 1)
-        offset = .zero
-        print(gameModel.randomElementOfArray)
+        // print(gameModel.randomElementOfArray)
     }
     
- 
+    
 }
 
 
 struct GameScreen_Previews: PreviewProvider {
-        static var previews: some View {
-            NavigationStack {
-                GameScreen()
-            }
-            .environmentObject(CategoriesOfWordsVM())
+    static var previews: some View {
+        NavigationStack {
+            GameScreen()
         }
+        .environmentObject(CategoriesOfWordsVM())
     }
+}

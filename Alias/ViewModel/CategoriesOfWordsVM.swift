@@ -11,9 +11,9 @@ class CategoriesOfWordsVM: ObservableObject {
     
     @Published  var randomElementOfArray = 0
     @Published var elements: [GameModel] = [
-        GameModel(nameOfCategory: "Element One", isAdded: false, arrayOfWords: arrayOne),
-        GameModel(nameOfCategory: "Element Two", isAdded: false, arrayOfWords: arrayTwo),
-        GameModel(nameOfCategory: "Element Three", isAdded: false, arrayOfWords: arrayThree)]
+        GameModel(nameOfCategory: "Element One", isAdded: false, arrayOfWords: ArrayOfWords().arrayOne),
+        GameModel(nameOfCategory: "Element Two", isAdded: false, arrayOfWords: ArrayOfWords().arrayTwo),
+        GameModel(nameOfCategory: "Element Three", isAdded: false, arrayOfWords: ArrayOfWords().arrayThree)]
     
     @Published var arrayOfWords = [String]()
     

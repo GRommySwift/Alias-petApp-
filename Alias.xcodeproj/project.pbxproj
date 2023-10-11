@@ -35,6 +35,8 @@
 		0BED8CF62AC82E3100E7EA32 /* NextScreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BED8CF52AC82E3100E7EA32 /* NextScreenButton.swift */; };
 		0BED8CF82AC82F1100E7EA32 /* GameCategoriesSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BED8CF72AC82F1100E7EA32 /* GameCategoriesSelection.swift */; };
 		309A834A2AD34F8C00B71B44 /* GameResultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309A83492AD34F8C00B71B44 /* GameResultsModel.swift */; };
+		30C283722AD6FCD3005665FC /* CardReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C283712AD6FCD3005665FC /* CardReady.swift */; };
+		30C283742AD6FF59005665FC /* CreatedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C283732AD6FF59005665FC /* CreatedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,8 @@
 		0BED8CF52AC82E3100E7EA32 /* NextScreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextScreenButton.swift; sourceTree = "<group>"; };
 		0BED8CF72AC82F1100E7EA32 /* GameCategoriesSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCategoriesSelection.swift; sourceTree = "<group>"; };
 		309A83492AD34F8C00B71B44 /* GameResultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultsModel.swift; sourceTree = "<group>"; };
+		30C283712AD6FCD3005665FC /* CardReady.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardReady.swift; sourceTree = "<group>"; };
+		30C283732AD6FF59005665FC /* CreatedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +220,8 @@
 			children = (
 				0BD39AC42AC99BBB00056C0F /* GameScreen.swift */,
 				0BD39ACB2AC9A98E00056C0F /* CardView.swift */,
+				30C283712AD6FCD3005665FC /* CardReady.swift */,
+				30C283732AD6FF59005665FC /* CreatedButton.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -309,11 +315,13 @@
 				0BD2C41C2AAE073800521BAE /* StartGame.swift in Sources */,
 				0B0530E82AC859F00020F7A0 /* CardOfWords.swift in Sources */,
 				0BD2C4202AAE204100521BAE /* CustomFonts.swift in Sources */,
+				30C283722AD6FCD3005665FC /* CardReady.swift in Sources */,
 				0BED8CF62AC82E3100E7EA32 /* NextScreenButton.swift in Sources */,
 				0BD2C42F2AB71C1600521BAE /* AddNewTeam.swift in Sources */,
 				0BD2C42C2AB0B98B00521BAE /* CardListRow.swift in Sources */,
 				0BD39AC52AC99BBB00056C0F /* GameScreen.swift in Sources */,
 				0BD2C4152AAE066B00521BAE /* GameModel.swift in Sources */,
+				30C283742AD6FF59005665FC /* CreatedButton.swift in Sources */,
 				0BD2C4042AAE051D00521BAE /* ContentView.swift in Sources */,
 				0BD2C42A2AAF955E00521BAE /* AddTeamView.swift in Sources */,
 				0BD2C43B2AB9AD9800521BAE /* NoTeamTextAndImage.swift in Sources */,
