@@ -17,8 +17,7 @@ struct StartGame: View {
                     Spacer()
                     StartTitle()
                     Spacer()
-                    NavigationLink(destination: TeamSelectorView()) {
-                        StartButton() }
+                    StartButton()
                     
                     Spacer()
                 }
@@ -35,6 +34,6 @@ struct StartGame_Previews: PreviewProvider {
             
         }
         .environmentObject(AddNewTeam())
-        .environmentObject(CategoriesOfWordsVM())
+        .environmentObject(GameScreenViewModel())
     }
 }

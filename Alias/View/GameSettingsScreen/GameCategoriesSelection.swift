@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GameCategoriesSelection: View {
-    @EnvironmentObject var gameModel: CategoriesOfWordsVM
+    @EnvironmentObject var gameModel: GameScreenViewModel
     @Environment(\.dismiss) var dismiss
     @State var isPresenting = false
     var body: some View {
@@ -62,7 +62,7 @@ struct GameCategoriesSelection_Previews: PreviewProvider {
             NavigationStack {
                 GameCategoriesSelection()
             }
-            .environmentObject(CategoriesOfWordsVM())
+            .environmentObject(GameScreenViewModel())
             .environmentObject(AddNewTeam())
         }
     }

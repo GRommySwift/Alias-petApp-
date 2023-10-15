@@ -27,7 +27,7 @@ struct AliasApp: App {
 //    }
 //
     @StateObject var addNewTeam: AddNewTeam = AddNewTeam()
-    @StateObject var gameModel: CategoriesOfWordsVM = CategoriesOfWordsVM()
+    @StateObject var gameModel: GameScreenViewModel = GameScreenViewModel()
     
     var body: some Scene {
         WindowGroup {

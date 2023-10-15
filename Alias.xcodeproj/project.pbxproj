@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0B0530E22AC8497E0020F7A0 /* WordsForGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0530E12AC8497E0020F7A0 /* WordsForGame.swift */; };
-		0B0530E42AC849C30020F7A0 /* CategoriesOfWordsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0530E32AC849C30020F7A0 /* CategoriesOfWordsVM.swift */; };
+		0B0530E42AC849C30020F7A0 /* GameScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0530E32AC849C30020F7A0 /* GameScreenViewModel.swift */; };
 		0B0530E62AC858430020F7A0 /* ItemSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0530E52AC858430020F7A0 /* ItemSelector.swift */; };
 		0B0530E82AC859F00020F7A0 /* CardOfWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0530E72AC859F00020F7A0 /* CardOfWords.swift */; };
 		0BD2C4022AAE051D00521BAE /* AliasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2C4012AAE051D00521BAE /* AliasApp.swift */; };
@@ -37,11 +37,14 @@
 		309A834A2AD34F8C00B71B44 /* GameResultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309A83492AD34F8C00B71B44 /* GameResultsModel.swift */; };
 		30C283722AD6FCD3005665FC /* CardReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C283712AD6FCD3005665FC /* CardReady.swift */; };
 		30C283742AD6FF59005665FC /* CreatedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C283732AD6FF59005665FC /* CreatedButton.swift */; };
+		30D6CE222ADC2709001A7AA8 /* BetweenGameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D6CE212ADC2709001A7AA8 /* BetweenGameScreen.swift */; };
+		30D6CE242ADC3684001A7AA8 /* GSNextScreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D6CE232ADC3684001A7AA8 /* GSNextScreenButton.swift */; };
+		30D6CE262ADC3A28001A7AA8 /* AfterGameGuessedWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D6CE252ADC3A28001A7AA8 /* AfterGameGuessedWords.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0B0530E12AC8497E0020F7A0 /* WordsForGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsForGame.swift; sourceTree = "<group>"; };
-		0B0530E32AC849C30020F7A0 /* CategoriesOfWordsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesOfWordsVM.swift; sourceTree = "<group>"; };
+		0B0530E32AC849C30020F7A0 /* GameScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScreenViewModel.swift; sourceTree = "<group>"; };
 		0B0530E52AC858430020F7A0 /* ItemSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSelector.swift; sourceTree = "<group>"; };
 		0B0530E72AC859F00020F7A0 /* CardOfWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardOfWords.swift; sourceTree = "<group>"; };
 		0BD2C3FE2AAE051D00521BAE /* Alias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alias.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +74,9 @@
 		309A83492AD34F8C00B71B44 /* GameResultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultsModel.swift; sourceTree = "<group>"; };
 		30C283712AD6FCD3005665FC /* CardReady.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardReady.swift; sourceTree = "<group>"; };
 		30C283732AD6FF59005665FC /* CreatedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedButton.swift; sourceTree = "<group>"; };
+		30D6CE212ADC2709001A7AA8 /* BetweenGameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetweenGameScreen.swift; sourceTree = "<group>"; };
+		30D6CE232ADC3684001A7AA8 /* GSNextScreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSNextScreenButton.swift; sourceTree = "<group>"; };
+		30D6CE252ADC3A28001A7AA8 /* AfterGameGuessedWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterGameGuessedWords.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				0BD2C42E2AB71C1600521BAE /* AddNewTeam.swift */,
-				0B0530E32AC849C30020F7A0 /* CategoriesOfWordsVM.swift */,
+				0B0530E32AC849C30020F7A0 /* GameScreenViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -222,6 +228,7 @@
 				0BD39ACB2AC9A98E00056C0F /* CardView.swift */,
 				30C283712AD6FCD3005665FC /* CardReady.swift */,
 				30C283732AD6FF59005665FC /* CreatedButton.swift */,
+				30D6CE232ADC3684001A7AA8 /* GSNextScreenButton.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -229,6 +236,8 @@
 		0BD39AC32AC99B7800056C0F /* BetweenGamesScreen */ = {
 			isa = PBXGroup;
 			children = (
+				30D6CE212ADC2709001A7AA8 /* BetweenGameScreen.swift */,
+				30D6CE252ADC3A28001A7AA8 /* AfterGameGuessedWords.swift */,
 			);
 			path = BetweenGamesScreen;
 			sourceTree = "<group>";
@@ -308,9 +317,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BD2C4282AAF952A00521BAE /* TeamContentView.swift in Sources */,
+				30D6CE222ADC2709001A7AA8 /* BetweenGameScreen.swift in Sources */,
 				0B0530E22AC8497E0020F7A0 /* WordsForGame.swift in Sources */,
 				0BD2C4132AAE062A00521BAE /* PlayersModel.swift in Sources */,
 				0BED8CF82AC82F1100E7EA32 /* GameCategoriesSelection.swift in Sources */,
+				30D6CE262ADC3A28001A7AA8 /* AfterGameGuessedWords.swift in Sources */,
 				0BD2C4242AAE233900521BAE /* StartTitle.swift in Sources */,
 				0BD2C41C2AAE073800521BAE /* StartGame.swift in Sources */,
 				0B0530E82AC859F00020F7A0 /* CardOfWords.swift in Sources */,
@@ -320,12 +331,13 @@
 				0BD2C42F2AB71C1600521BAE /* AddNewTeam.swift in Sources */,
 				0BD2C42C2AB0B98B00521BAE /* CardListRow.swift in Sources */,
 				0BD39AC52AC99BBB00056C0F /* GameScreen.swift in Sources */,
+				30D6CE242ADC3684001A7AA8 /* GSNextScreenButton.swift in Sources */,
 				0BD2C4152AAE066B00521BAE /* GameModel.swift in Sources */,
 				30C283742AD6FF59005665FC /* CreatedButton.swift in Sources */,
 				0BD2C4042AAE051D00521BAE /* ContentView.swift in Sources */,
 				0BD2C42A2AAF955E00521BAE /* AddTeamView.swift in Sources */,
 				0BD2C43B2AB9AD9800521BAE /* NoTeamTextAndImage.swift in Sources */,
-				0B0530E42AC849C30020F7A0 /* CategoriesOfWordsVM.swift in Sources */,
+				0B0530E42AC849C30020F7A0 /* GameScreenViewModel.swift in Sources */,
 				0BD2C4022AAE051D00521BAE /* AliasApp.swift in Sources */,
 				0BD2C4222AAE22CC00521BAE /* StartButton.swift in Sources */,
 				0BD39ACC2AC9A98E00056C0F /* CardView.swift in Sources */,

@@ -28,10 +28,10 @@ struct TeamSelectorView: View {
                         
                     }.padding(EdgeInsets(top: 0, leading: -20, bottom: 0, trailing: -20))
                         .scrollContentBackground(.hidden)
-                    NextScreenButton()
+                  NextScreenButton()
                         .position(x: Constants.DisplaySize.screenWidth * 0.85, y: Constants.DisplaySize.screenHeight * 0.83)
                 }
-               AddNewTeamButton()
+                AddNewTeamButton()
                 .position(x: Constants.DisplaySize.screenWidth * 0.5, y: Constants.DisplaySize.screenHeight * 0.83  )
                 
             }
@@ -49,6 +49,6 @@ struct TeamSelectorView_Previews: PreviewProvider {
             TeamSelectorView()
         }
         .environmentObject(AddNewTeam())
-        .environmentObject(CategoriesOfWordsVM())
+        .environmentObject(GameScreenViewModel())
     }
 }
