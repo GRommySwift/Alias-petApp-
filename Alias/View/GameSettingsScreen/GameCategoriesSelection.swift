@@ -27,6 +27,7 @@ struct GameCategoriesSelection: View {
                 Button {
                     isPresenting = true
                     gameModel.addWordsToArray()
+                   _ = gameModel.randomNumberForArrayOfWords()
                 } label: {
                     Text("Start")
                         .font(.title.weight(.semibold))

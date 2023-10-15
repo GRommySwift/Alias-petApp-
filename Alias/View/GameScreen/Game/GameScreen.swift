@@ -10,7 +10,7 @@ import SwiftUI
 struct GameScreen: View {
     @EnvironmentObject var gameModel: GameScreenViewModel
     @State private var redirectToNextView = false
-    @State var timeRemaining: Int = 5
+    @State var timeRemaining: Int = 2
     @State var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     //  @State var offset: CGSize = .zero
     @State private var isShowingCard1 = true

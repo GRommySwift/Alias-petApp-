@@ -17,7 +17,7 @@ struct AfterGameGuessedWords: View {
                 Spacer()
                 ZStack(alignment: .leading) {
                     HStack {
-                        Text(item.selectedWord)
+                        Text(item.selectedWord).font(.custom(.buttonFont, size: 22)).opacity(0.8).foregroundStyle(.black)
                     }
                 }
                 Spacer()
@@ -36,7 +36,7 @@ struct AfterGameGuessedWords: View {
             
         }
         .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
-        .frame(width: Constants.DisplaySize.screenWidth * 0.9, height: Constants.DisplaySize.screenHeight * 0.07)
+        .frame(width: Constants.DisplaySize.screenWidth * 0.9, height: Constants.DisplaySize.screenHeight * 0.05)
         .listRowBackground(Color("BGColor"))
         
         
