@@ -9,6 +9,7 @@ import SwiftUI
 
 struct BetweenGameScreen: View {
     @EnvironmentObject var gameModel: GameScreenViewModel
+    @State var isPresenting = false
     
     var body: some View {
         NavigationStack {
@@ -21,6 +22,22 @@ struct BetweenGameScreen: View {
                         }
                     }
                     .scrollContentBackground(.hidden)
+                }
+                
+                Button {
+                    isPresenting = true
+                } label: {
+                    Text("Next")
+                        .font(.title.weight(.semibold))
+                        .padding()
+                        .background(Color.purple)
+                        .foregroundColor(.white)
+                        .cornerRadius(40)
+                        .shadow(radius: 4, x: 0, y: 4)
+                }
+                .position(x: Constants.DisplaySize.screenWidth * 0.5, y: Constants.DisplaySize.screenHeight * 0.83  )
+                .navigationDestination(isPresented: $isPresenting) {
+                    AfterGameScreen()
                 }
             }
         }

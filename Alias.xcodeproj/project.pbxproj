@@ -34,6 +34,7 @@
 		0BED8CF42AC82E1E00E7EA32 /* AddNewTeamButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BED8CF32AC82E1E00E7EA32 /* AddNewTeamButton.swift */; };
 		0BED8CF62AC82E3100E7EA32 /* NextScreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BED8CF52AC82E3100E7EA32 /* NextScreenButton.swift */; };
 		0BED8CF82AC82F1100E7EA32 /* GameCategoriesSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BED8CF72AC82F1100E7EA32 /* GameCategoriesSelection.swift */; };
+		309757FD2ADE9A5F001FA7D8 /* AfterGameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309757FC2ADE9A5F001FA7D8 /* AfterGameScreen.swift */; };
 		309A834A2AD34F8C00B71B44 /* GameResultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309A83492AD34F8C00B71B44 /* GameResultsModel.swift */; };
 		30C283722AD6FCD3005665FC /* CardReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C283712AD6FCD3005665FC /* CardReady.swift */; };
 		30C283742AD6FF59005665FC /* CreatedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C283732AD6FF59005665FC /* CreatedButton.swift */; };
@@ -71,6 +72,7 @@
 		0BED8CF32AC82E1E00E7EA32 /* AddNewTeamButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewTeamButton.swift; sourceTree = "<group>"; };
 		0BED8CF52AC82E3100E7EA32 /* NextScreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextScreenButton.swift; sourceTree = "<group>"; };
 		0BED8CF72AC82F1100E7EA32 /* GameCategoriesSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCategoriesSelection.swift; sourceTree = "<group>"; };
+		309757FC2ADE9A5F001FA7D8 /* AfterGameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterGameScreen.swift; sourceTree = "<group>"; };
 		309A83492AD34F8C00B71B44 /* GameResultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultsModel.swift; sourceTree = "<group>"; };
 		30C283712AD6FCD3005665FC /* CardReady.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardReady.swift; sourceTree = "<group>"; };
 		30C283732AD6FF59005665FC /* CreatedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedButton.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 		0BD2C41A2AAE06C400521BAE /* AfterGameScreen */ = {
 			isa = PBXGroup;
 			children = (
+				309757FC2ADE9A5F001FA7D8 /* AfterGameScreen.swift */,
 			);
 			path = AfterGameScreen;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				309A834A2AD34F8C00B71B44 /* GameResultsModel.swift in Sources */,
 				0B0530E62AC858430020F7A0 /* ItemSelector.swift in Sources */,
 				0BED8CF42AC82E1E00E7EA32 /* AddNewTeamButton.swift in Sources */,
+				309757FD2ADE9A5F001FA7D8 /* AfterGameScreen.swift in Sources */,
 				0BD2C43D2AB9B90F00521BAE /* NoTeamAnimatedArrow.swift in Sources */,
 				0BD2C4262AAE26C500521BAE /* TeamSelectorView.swift in Sources */,
 				0BD2C41E2AAE0DE500521BAE /* Constants.swift in Sources */,
