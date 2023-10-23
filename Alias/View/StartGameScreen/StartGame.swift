@@ -35,5 +35,6 @@ struct StartGame_Previews: PreviewProvider {
         }
         .environmentObject(AddNewTeam())
         .environmentObject(GameScreenViewModel())
+        .environmentObject(AfterGameViewModel())
     }
 }

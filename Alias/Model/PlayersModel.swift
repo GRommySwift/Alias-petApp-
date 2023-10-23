@@ -10,10 +10,10 @@ import Foundation
 struct PlayersModel: Identifiable {
     let id = UUID()
     let teamName: String
-    let playerName1: String
-    let playerName2: String
+    let players: [String]
     let teamImage : String
     let teamSummary: String
+    var score: Int
 }
 
 //extension PlayersModel {

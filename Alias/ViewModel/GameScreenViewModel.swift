@@ -5,7 +5,7 @@
 //  Created by Roman on 30/09/2023.
 //
 
-import Foundation
+import SwiftUI
 
 class GameScreenViewModel: ObservableObject {
     @Published var randomElementOfArray = 0

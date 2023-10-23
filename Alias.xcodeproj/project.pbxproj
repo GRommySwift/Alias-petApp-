@@ -35,6 +35,7 @@
 		0BED8CF62AC82E3100E7EA32 /* NextScreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BED8CF52AC82E3100E7EA32 /* NextScreenButton.swift */; };
 		0BED8CF82AC82F1100E7EA32 /* GameCategoriesSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BED8CF72AC82F1100E7EA32 /* GameCategoriesSelection.swift */; };
 		309757FD2ADE9A5F001FA7D8 /* AfterGameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309757FC2ADE9A5F001FA7D8 /* AfterGameScreen.swift */; };
+		309757FF2AE6BECC001FA7D8 /* AfterGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309757FE2AE6BECC001FA7D8 /* AfterGameViewModel.swift */; };
 		309A834A2AD34F8C00B71B44 /* GameResultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309A83492AD34F8C00B71B44 /* GameResultsModel.swift */; };
 		30C283722AD6FCD3005665FC /* CardReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C283712AD6FCD3005665FC /* CardReady.swift */; };
 		30C283742AD6FF59005665FC /* CreatedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C283732AD6FF59005665FC /* CreatedButton.swift */; };
@@ -73,6 +74,7 @@
 		0BED8CF52AC82E3100E7EA32 /* NextScreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextScreenButton.swift; sourceTree = "<group>"; };
 		0BED8CF72AC82F1100E7EA32 /* GameCategoriesSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCategoriesSelection.swift; sourceTree = "<group>"; };
 		309757FC2ADE9A5F001FA7D8 /* AfterGameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterGameScreen.swift; sourceTree = "<group>"; };
+		309757FE2AE6BECC001FA7D8 /* AfterGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterGameViewModel.swift; sourceTree = "<group>"; };
 		309A83492AD34F8C00B71B44 /* GameResultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultsModel.swift; sourceTree = "<group>"; };
 		30C283712AD6FCD3005665FC /* CardReady.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardReady.swift; sourceTree = "<group>"; };
 		30C283732AD6FF59005665FC /* CreatedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedButton.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			children = (
 				0BD2C42E2AB71C1600521BAE /* AddNewTeam.swift */,
 				0B0530E32AC849C30020F7A0 /* GameScreenViewModel.swift */,
+				309757FE2AE6BECC001FA7D8 /* AfterGameViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 			files = (
 				0BD2C4282AAF952A00521BAE /* TeamContentView.swift in Sources */,
 				30D6CE222ADC2709001A7AA8 /* BetweenGameScreen.swift in Sources */,
+				309757FF2AE6BECC001FA7D8 /* AfterGameViewModel.swift in Sources */,
 				0B0530E22AC8497E0020F7A0 /* WordsForGame.swift in Sources */,
 				0BD2C4132AAE062A00521BAE /* PlayersModel.swift in Sources */,
 				0BED8CF82AC82F1100E7EA32 /* GameCategoriesSelection.swift in Sources */,

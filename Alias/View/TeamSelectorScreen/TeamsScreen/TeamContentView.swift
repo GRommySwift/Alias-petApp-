@@ -21,10 +21,10 @@ struct TeamContentView: View {
                     
                 HStack {
                     VStack(alignment: .center, spacing: 5) {
-                        Text("Player1 - \(item.playerName1)")
+                        Text("Player1 - \(item.players[0])")
                             .font(.custom(.subTitleFont, size: 16))
                             .foregroundColor(Constants.Colors.greenColor)
-                        Text("Player1 - \(item.playerName2)")
+                        Text("Player1 - \(item.players[1])")
                             .font(.custom(.subTitleFont, size: 16))
                             .foregroundColor(Constants.Colors.greenColor)
                         Text(item.teamSummary)

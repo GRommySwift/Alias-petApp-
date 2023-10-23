@@ -10,7 +10,7 @@ import SwiftUI
 struct GameCategoriesSelection: View {
     @EnvironmentObject var gameModel: GameScreenViewModel
     @Environment(\.dismiss) var dismiss
-    @State var isPresenting = false
+    @State private var isPresenting = false
     var body: some View {
         NavigationStack {
             ZStack {
@@ -64,6 +64,7 @@ struct GameCategoriesSelection_Previews: PreviewProvider {
                 GameCategoriesSelection()
             }
             .environmentObject(GameScreenViewModel())
-            .environmentObject(AddNewTeam())
+        //    .environmentObject(AddNewTeam())
+         //   .environmentObject(AfterGameViewModel())
         }
     }

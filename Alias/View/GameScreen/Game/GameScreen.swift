@@ -116,5 +116,6 @@ struct GameScreen_Previews: PreviewProvider {
             GameScreen()
         }
         .environmentObject(GameScreenViewModel())
+   //     .environmentObject(AfterGameViewModel())
     }
 }

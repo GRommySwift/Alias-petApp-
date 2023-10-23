@@ -19,7 +19,8 @@ struct ContentView_Previews: PreviewProvider {
         NavigationStack {
             ContentView()
         }
-        .environmentObject(AddNewTeam())
-        .environmentObject(GameScreenViewModel())
+     //   .environmentObject(AddNewTeam())
+     //   .environmentObject(GameScreenViewModel())
+     //   .environmentObject(AfterGameViewModel())
     }
 }
