@@ -28,16 +28,18 @@ struct BetweenGameScreen: View {
                 }
                 
                 Button {
+                    scoreOfGame = 0
                     isPresenting = true
                     for item in gameModel.gameResult {
                         if item.isGuessedRight == true {
                             scoreOfGame += 1
-                            print("Score in loop - \(scoreOfGame)")
+                            //print("Score in loop - \(scoreOfGame)")
                         }
                     }
                     print("Score out loop - \(scoreOfGame)")
                     addNewTeam.teams[addNewTeam.currentTeamIndex].score += scoreOfGame
                     addNewTeam.nextTeamAndPlayer()
+                    gameModel.gameResult = []
                 } label: {
                     Text("Next")
                         .font(.title.weight(.semibold))
